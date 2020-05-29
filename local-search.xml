@@ -4,11 +4,24 @@
   
   
   <entry>
-    <title>我的博客迁移啦</title>
+    <title>&#39;test&#39;</title>
+    <link href="/2020/05/30/test/"/>
+    <url>/2020/05/30/test/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/.io//gitalk3.png" srcset="/img/loading.gif" alt="gitalk回调地址"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>从博客园到</title>
     <link href="/2020/05/28/my-new-blog/"/>
     <url>/2020/05/28/my-new-blog/</url>
     
-    <content type="html"><![CDATA[<p>我的博客从博客园转到现在的 Github Page 啦</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的博客从以前的博客园<a href="https://www.cnblogs.com/wuguanglin" target="_blank" rel="noopener">汕大小吴-博客园</a>迁移到现在的 <code>Github Page</code> <a href="http://ericwu.cn/" target="_blank" rel="noopener">汕大小吴</a>啦 ！！！</p><p>现在的博客是基于<code>hexo</code>搭建的，使用的是<code>hexo-theme-fluid</code>主题，部署在<code>GitHub Page</code>上，使用的是自定义的域名，评论系统采用了<code>gitalk</code>，然后图片使用了<code>hexo-asset-image</code>插件管理。</p><p>欢迎大家收藏我的新博客网址。</p><h2 id="为啥从博客园切换到-Github-Page？"><a href="#为啥从博客园切换到-Github-Page？" class="headerlink" title="为啥从博客园切换到 Github Page？"></a>为啥从博客园切换到 Github Page？</h2><ol><li><p>博客园社区活跃度不复从前。</p><p>如果你浏览过博客园首页的话，你会发现博客园首页真的太烂了，使用体验很差，见下图。这就导致了博客园的社区活跃度不够。作为一名写作者，写作的内容就会比较少人看到。所以我打算使用 Github Page 作为我的博客中心站点，然后可以根据我的需要将博客同步到我想要发布的平台，比如掘金、segmentfault、博客园等。<br><img src="/.io//cnblogs.png" srcset="/img/loading.gif" alt="博客园首页"></p></li><li><p>无法使用自己的域名</p><p>如果想要在网络上建立起自己的个人品牌和影响力的话，还是很有必要使用自己的域名的。另外通过 Github Page+自定义域名，我们可以让自己 github 上的项目都部署起来。比如我的博客是 ericwu.cn，我的前端面试盒子是 fe.ericwu.cn</p></li><li><p>定制化不够自由<br>博客园提供的定制化基本上都是 CSS 相关的，如果想要深层次定制是不支持的，而我们有时候想要一些深层次的定制。</p></li></ol><h2 id="我是如何搭建现在的博客"><a href="#我是如何搭建现在的博客" class="headerlink" title="我是如何搭建现在的博客"></a>我是如何搭建现在的博客</h2><p>说实话，搭建现在的博客我也是走了一些弯路，参考了许多博客文章，看了许多博客主题。我会将一些值得注意的点或者坑写出来。</p><h3 id="博客技术选型"><a href="#博客技术选型" class="headerlink" title="博客技术选型"></a>博客技术选型</h3><p>我主要参考了杨琼璞的文章：<a href="https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/" target="_blank" rel="noopener">如何选定搭建个人独立博客工具</a><br> 我也看了很多博客，总结下我的看法就是。</p><ul><li><code>Vuepress</code> 简洁至上，适合写技术文档，打算用在我的前端面试盒子上。</li><li><code>Jekyll</code> 功能丰富，相对<code>vuepress</code>和<code>hexo</code>算老，并且基于 Ruby 的。</li><li><code>Hexo</code> 功能丰富，也比较成熟，有很多插件，基于 Node。</li></ul><p>综上所述，我选择使用<code>hexo</code>来搭建博客，并且我看了很多博客主题，比较喜欢的是<code>hexo-theme-fluid</code>主题，其文档也比较详细。</p><h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><p>我的博客搭建主要参考了这篇文章：<a href="https://juejin.im/post/5dcbaa9af265da4d072dc4ef" target="_blank" rel="noopener">快用 Hexo+GitHub 搭建属于自己的博客吧～</a> ，并且我使用了 gitalk 作为评论系统。这里说下值得注意的点有：</p><ol><li><p>博客的 github 仓库名。仓库名必须为 yourname.github.io，部署的时候，使用 Github Page 就会部署到 yourname.github.io 下。如果你使用了比如 example 作为仓库名，那么就会部署到 yourname.github.io/example/下。</p></li><li><p>如何给博客仓库增加<code>README.md</code>：在<code>_config.yml</code>中修改 skip_render 为<code>skip_render: README.md</code>，然后在 source 目录下增加你的仓库介绍文件 README.md</p></li><li><p>自定义域名。记得在你 source 目录下增加 CNAME 文件，填写你的自定义域名。部署的时候 Github 会自动帮你设置将 yourname.github.io 切换为你的自定义域名，如图（当然你也可以手动设置）。<br><img src="/.io//custom-domain.png" srcset="/img/loading.gif" alt="自定义域名"></p></li><li><p>使用 gitalk 作为评论系统。如果你使用了 fluid 主题的话，需要修改下代码，如下图，因为他们的 MD5 的那个 js 文件出问题了。并且配置 gitalk 时，repo 名为仓库名而不是仓库地址。以及注册应用时 gitalk 的回调地址，需要使用你的博客部署域名（也就是使用了自定义域名的话就要填自定义域名。<br><img src="/.io//gitalk.png" srcset="/img/loading.gif" alt="gitalk.ejs"><br><img src="/.io//gitalk2.png" srcset="/img/loading.gif" alt="gitalk配置"><br><img src="/.io//gitalk3.png" srcset="/img/loading.gif" alt="gitalk回调地址"></p></li><li><p>建议使用博客仓库存储图片。现在的 CDN 需要备案域名，使用 CDN 的话有风险，如果 CDN 挂了，博客中的图片就没了，并且每次写作时还要上传图片到 CDN 比较麻烦。所以这里推荐使用<code>hexo-asset-image</code>插件。</p></li></ol>]]></content>
     
     
     <categories>
@@ -20,11 +33,11 @@
     
     <tags>
       
-      <tag>博客园</tag>
-      
       <tag>Github Page</tag>
       
       <tag>hexo</tag>
+      
+      <tag>hexo-theme-fluid</tag>
       
     </tags>
     

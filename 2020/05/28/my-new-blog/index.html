@@ -208,7 +208,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k 字
+      1.3k 字
     </span>
   
 
@@ -281,11 +281,14 @@
 <li><p>自定义域名。记得在你 source 目录下增加 CNAME 文件，填写你的自定义域名。部署的时候 Github 会自动帮你设置将 <code>yourname.github.io</code> 切换为你的自定义域名，如图（当然你也可以手动设置）。<br><img src="/2020/05/28/my-new-blog/custom-domain.png" srcset="/img/loading.gif" alt="自定义域名"></p>
 </li>
 <li><p>gitalk 评论系统。如果你使用了 fluid 主题的话，需要修改下代码，如下图，因为他们的 MD5 的那个 js 文件出问题了，当然最新版已经修复这个问题了。配置 gitalk 时，repo 名为仓库名而不是仓库地址。以及注册应用时 gitalk 的回调地址，需要使用你的博客部署域名（也就是使用了自定义域名的话就要填自定义域名。<br><img src="/2020/05/28/my-new-blog/gitalk.png" srcset="/img/loading.gif" alt="gitalk.ejs"><br><img src="/2020/05/28/my-new-blog/gitalk2.png" srcset="/img/loading.gif" alt="gitalk配置"><br><img src="/2020/05/28/my-new-blog/gitalk3.png" srcset="/img/loading.gif" alt="gitalk回调地址"></p>
+<blockquote>
+<p>后续：当时部署的主题还是1.8.0 版本的。后续主题更新到1.8.6版本已经修复这个问题了。<br>我也基于最新的1.8.6版本的hexo-fluid-theme重新修改了我的fluid_config.yml文件</p>
+</blockquote>
 </li>
 <li><p>关于<code>hexo-asset-image</code>插件。现在的 CDN 需要备案域名，使用 CDN 的话有风险，如果 CDN 挂了，博客中的图片就没了，并且每次写作时还要上传图片到 CDN 比较麻烦。所以这里推荐使用<code>hexo-asset-image</code>插件，会给每篇博客创立一个目录用于收录图片资源。但是这里有个坑，npm 上的 <code>hexo-asset-image</code> 包是错误的，具体可以看这个<a target="_blank" rel="noopener" href="https://github.com/xcodebuild/hexo-asset-image/issues/47">issue#47</a>。虽然官方代码已经修复了，但是 npm 包还是错误，因此建议安装他人发布的修复包，或者使用<a target="_blank" rel="noopener" href="https://github.com/xcodebuild/hexo-asset-image/blob/master/index.js">正确版代码</a>直接覆盖掉 node_modules/hexo-asset-image/index.js 中的代码。</p>
 </li>
 </ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>工欲善其事必先利其器。<br>一个简单、简洁的个人博客，既有利于提高自己的创作兴趣，也有利于个人品牌的建设。<br>希望每个人都能搭建一个拥有自己个人特色的博客。加油。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>工欲善其事必先利其器。<br>一个简单、简洁的个人博客，既有利于提高自己的创作兴趣，也有利于个人品牌的建设。<br>希望每个人都能搭建一个拥有自己个人特色的博客。</p>
 
             </div>
             <hr>
